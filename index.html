@@ -345,6 +345,47 @@ section:nth-of-type(even) .titleblock{transform:rotate(.5deg);}
 .badge.gold{transform:rotate(-1.5deg);}
 .hero-sub::after{content:" ✦";color:var(--amber);}
 
+
+/* ---------- 媒体报道剪报墙 ---------- */
+.clip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media(max-width:900px){.clip-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.clip-grid{grid-template-columns:1fr;}}
+.clip{
+  position:relative;display:block;background:#FDFBF5;
+  border:1px solid var(--line);padding:20px 18px 16px;
+  box-shadow:0 6px 16px rgba(20,42,59,.12);
+  color:var(--ink);text-decoration:none;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.clip:nth-child(3n+1){transform:rotate(-1.6deg);}
+.clip:nth-child(3n+2){transform:rotate(1.2deg);}
+.clip:nth-child(3n){transform:rotate(-.6deg);}
+.clip:hover{transform:rotate(0deg) translateY(-4px);box-shadow:0 12px 26px rgba(20,42,59,.18);text-decoration:none;}
+.clip .c-tape{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-3deg);
+  width:84px;height:24px;background:rgba(14,124,134,.2);
+  border-left:2px dashed rgba(14,124,134,.4);border-right:2px dashed rgba(14,124,134,.4);
+}
+.clip .c-stamp{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;
+  border:1.5px solid var(--amber);color:var(--amber);border-radius:3px;
+  padding:1px 8px;transform:rotate(-2deg);margin-bottom:10px;
+}
+.clip h3{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.6;margin-bottom:8px;}
+.clip p{font-size:.83rem;color:var(--ink-soft);line-height:1.7;}
+.clip .c-hand{
+  display:block;margin-top:10px;font-family:var(--hand);font-size:1.05rem;
+  color:var(--teal-deep);transform:rotate(-1deg);
+}
+.clip .c-link{
+  display:inline-block;margin-top:6px;font-size:.76rem;color:var(--teal);
+  border-bottom:1px dashed var(--teal);
+}
+.press-note{
+  margin-top:24px;font-size:.8rem;color:var(--ink-soft);
+  background:var(--card);border:1px dashed var(--line);border-radius:4px;padding:12px 18px;
+}
+
 </style>
 </head>
 <body>
@@ -358,6 +399,7 @@ section:nth-of-type(even) .titleblock{transform:rotate(.5deg);}
       <a href="#research">科研成果</a>
       <a href="#skills">核心技能</a>
       <a href="#honors">荣誉墙</a>
+      <a href="#press">媒体报道</a>
       <a href="#contact">联系方式</a>
     </div>
   </div>
@@ -1325,6 +1367,73 @@ section:nth-of-type(even) .titleblock{transform:rotate(.5deg);}
 </section>
 
 </main>
+
+
+<!-- ================= 媒体报道 ================= -->
+<section id="press">
+  <div class="titleblock">
+    <div class="tb-no">图 06</div>
+    <div class="tb-name"><h2>媒体报道</h2><p>PRESS — 我参与过的那些新闻现场</p></div>
+  </div>
+
+  <div class="clip-grid">
+    <a class="clip" href="https://www.21jingji.com/article/20250721/herald/7b3d6ad54a9f919499c50eaf0b50e596.html" target="_blank" rel="noopener">
+      <span class="c-tape"></span>
+      <span class="c-stamp">21世纪经济报道</span>
+      <h3>中国机器人巴西踢足球夺冠,选手来自"清华系"公司</h3>
+      <p>RoboCup 2025 巴西世界赛,KidSize 组冠亚军均使用加速进化 K1 平台——清华 TH-MOS 获亚军,我在队中负责运动控制与决策模块。</p>
+      <span class="c-hand">我们的 K1 上场了!</span>
+      <span class="c-link">阅读报道 →</span>
+    </a>
+
+    <a class="clip" href="https://www.tsinghua-tj.org/news-details/336.html" target="_blank" rel="noopener">
+      <span class="c-tape"></span>
+      <span class="c-stamp">清华大学机械系</span>
+      <h3>清华 TH-MOS 机器人足球队于 2025 RoboCup 中国赛再获冠军</h3>
+      <p>世界赛之前,TH-MOS 在 RoboCup 中国赛先拿下国内冠军,为巴西之行热身。</p>
+      <span class="c-hand">出征前的底气 ✓</span>
+      <span class="c-link">阅读报道 →</span>
+    </a>
+
+    <a class="clip" href="https://www.shanghai.gov.cn/nw4411/20250530/aec28d3e205546e9933e5b3aad770465.html" target="_blank" rel="noopener">
+      <span class="c-tape"></span>
+      <span class="c-stamp">上海市人民政府</span>
+      <h3>取物叠衣踢足球,机器人赛场秀技能——张江国际人形机器人技能大赛举行</h3>
+      <p>2025 张江具身智能开发者大会暨国际人形机器人技能大赛,我作为清华紫荆战队成员参加足球挑战赛与应用场景挑战赛,拿下足球挑战赛冠军。</p>
+      <span class="c-hand">张江记录第一名!</span>
+      <span class="c-link">阅读报道 →</span>
+    </a>
+
+    <a class="clip" href="http://www.jingjiribao.cn/static/detail.jsp?id=669274" target="_blank" rel="noopener">
+      <span class="c-tape"></span>
+      <span class="c-stamp">经济日报</span>
+      <h3>构筑产业生态新底座,首届"探月计划·Physical AI 黑客松"举办</h3>
+      <p>200 余位开发者、50 支队伍、48 小时极限开发。我们的端到端辅助进食机器人从中杀出,拿下冠军——医疗康养被评为最具商业想象力方向之一。</p>
+      <span class="c-hand">48小时没白熬 ☕</span>
+      <span class="c-link">阅读报道 →</span>
+    </a>
+
+    <a class="clip" href="https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20260616/baafbcf5c248459facb170125cfa2c2a.html" target="_blank" rel="noopener">
+      <span class="c-tape"></span>
+      <span class="c-stamp">上海市国资委</span>
+      <h3>"申聚智源,创领未来"——首届"申智杯"人工智能创新大赛</h3>
+      <p>WAIC 组委会指导的标杆科创赛事,具身智能与机器人赛道百万奖金、实景真机实战。我们的工业多任务人形机器人系统获全国二等奖(奖金 10 万元)。</p>
+      <span class="c-hand">真机连续作业通关</span>
+      <span class="c-link">阅读报道 →</span>
+    </a>
+
+    <a class="clip" href="https://m.bjnews.com.cn/detail/1785337629129292.html" target="_blank" rel="noopener">
+      <span class="c-tape"></span>
+      <span class="c-stamp">新京报</span>
+      <h3>太极、街舞、啦啦操……人形机器人争夺"舞台C位"</h3>
+      <p>世界人形机器人运动会,舞蹈赛项全自主运行,从机械运动控制、群体协同、艺术创编三个维度评分。我连续两届参赛:首届 3V3 足球,第二届三星堆主题啦啦操。</p>
+      <span class="c-hand">机器人也要排舞 ♪</span>
+      <span class="c-link">阅读报道 →</span>
+    </a>
+  </div>
+
+  <p class="press-note">注:以上为赛事与活动的公开媒体报道,报道内容为赛事整体情况,我以参赛队员/团队成员身份参与其中。点击卡片可跳转原文。</p>
+</section>
 
 <footer id="contact">
   <div class="foot-inner">
